@@ -66,6 +66,11 @@ header .menu ul li a {
     flex-grow: 1;
 }
 
+header .menu ul li a:hover{
+    color:#ce7d35;
+    transition: all .3s;
+}
+
  main {
     
     background: #fff;
@@ -100,6 +105,7 @@ aside{
 }
 
 aside .widget {
+    padding: 5px;
     background: #ec6308;
 }
 
@@ -118,6 +124,36 @@ footer{
     flex: auto;
 }
 
+.tweets{
+    /*flex*/
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+article .tweet{
+    width:50%;
+    padding: 10px;
+    /*flex*/
+    display: flex;
+    flex-grow: 1;
+}
+
+article .photo{
+    width:50%;
+    padding: 10px;
+    height: 170px;
+    /*flex*/
+    display: flex;
+    flex-grow: 1;
+}
+
+#titletweet{
+    width: 100%;
+    align-content: center;
+   
+}
 
 @media screen and (max-width:800px){
     header{
@@ -128,6 +164,16 @@ footer{
     header .menu {
         width: 366px;
         /*flex*/
+    }
+    article .tweet{
+        width: 100%;
+    }
+    article .photo{
+        width: auto;
+        height: auto;
+    }
+    .tweets{
+        flex-direction: column;
     }
         
 }
