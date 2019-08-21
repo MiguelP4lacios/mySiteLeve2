@@ -15,113 +15,68 @@
     width: 100%;
     max-width: 1000px;
     margin: auto;
+    padding: 20px;
     /*flex*/
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-
+    /* flex box**/
+    display: flex;
+    flex: auto;
  }
 header .cont-logo a {
     color: #fff;
     font-size: 20px;
 }
 
- header nav{
-    width: 50%;
-    background: #fff;
-   /* flex*/
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-
-.menu > li{
-    position: relative;
-    display: inline-block;
-}
-
-.menu > li > a {
-    display: block;
-    padding: 5px 45px;
-    width: auto;
-    color: #353535;
-    flex-grow: 1;
-   
-}
-
-.menu li a:hover{
-    color:#ce7d35;
-    transition: all .3s;
-}
-
-.submenu{
-    position: absolute;
-    width: 120%;
-    background: #333333;
-    visibility:hidden;
-    opacity: 0;
-    transition: opacity .5s
-}
-
-.submenu li a {
-    display: block;
-    padding: 5px;
-    color: #fff;
-}
-.menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
-}
-/*
 header .menu {
     width: 50%;
     background: #fff;
-    flex
+    /*flex*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}*/
-/*
+}
+
 header .menu ul {
     background: #c0392b;
     color: #fff;
     text-align: center;
     padding: 10px;
-     flex
+     /*flex*/
     flex-grow: 1;
 
-}*/
-/*
+}
+
 header .menu ul li {
     background: #c0392b;
     color: #fff;
     text-align: center;
-     flex
+     /*flex*/
     flex-grow: 1;
 
-}*/
- /*
+}
+
 header .menu ul li a {
     background: #c0392b;
     color: #fff;
     text-align: center;
-    flex
+     /*flex*/
     flex-grow: 1;
-
 }
-*/
 
- 
  main {
     
     background: #fff;
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    
-
+    /* flex box**/
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 article{
@@ -145,7 +100,7 @@ aside{
 }
 
 aside .widget {
-    background: #d35400;
+    background: #ec6308;
 }
 
 footer{    
@@ -154,18 +109,25 @@ footer{
     max-width: 1000px;
     margin: auto;
     /*flex*/
-   
     align-items: center;
-    flex-wrap: wrap;
     flex-direction: row;
- 
-    
-}
-
-.positioning{
+    flex-wrap: wrap;
+    justify-content: flex-start;
     /* flex box**/
     display: flex;
     flex: auto;
-    flex-wrap: wrap;
-    flex-direction: row;
+}
+
+
+@media screen and (max-width:800px){
+    header{
+        flex-direction: column;
+        padding: 0;
+
+    }
+    header .menu {
+        width: 366px;
+        /*flex*/
+    }
+        
 }
