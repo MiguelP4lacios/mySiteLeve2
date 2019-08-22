@@ -142,19 +142,101 @@ article .tweet{
 
 article .photo{
     width:50%;
-    padding: 10px;
+    padding: 20px;
     height: 170px;
     /*flex*/
     display: flex;
     flex-grow: 1;
 }
 
-#titletweet{
+h1{
     width: 100%;
     align-content: center;
+    text-align: center;
    
 }
 
+.modal{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 99999999;
+    background: rgb(0,0,0,0.75);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.modal .content-modal{
+    width: 100%;
+    max-width: 680px;
+    position: fixed;
+    left: 40%;
+    top: -100vh;
+    transition: top 0.35s ease;
+    margin-left: -250px;
+    background: #fff;
+    box-shadow: 0 1px rgb(0,0,0,0.1);
+    z-index: 9999999;
+
+}
+.modal h2{
+    padding: 0.5em;
+    text-align: center;
+    color: #444444;
+    margin: 0;
+}
+
+.modal article{
+    /*height: 300px;*/
+    padding: 0;
+    margin: 0;
+
+}
+
+.close-modal{
+    color: #ff0000;
+    position: absolute;
+    top: 0.2em;
+    right: 0.375em;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.content-modal header{
+    align-items: center;
+    padding: 0;
+    height: 50px;
+
+}
+
+.modal a:hover{
+    color: #c0392b;
+}
+
+
+.modal:target{
+    opacity: 1;
+    top:0;
+}
+
+.modal .btn-close-modal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999991;
+}
+
+.modal:target .content-modal{
+    top:50px;
+    transition: top 0.35s ease;
+}
+ 
 @media screen and (max-width:800px){
     header{
         flex-direction: column;
@@ -174,6 +256,12 @@ article .photo{
     }
     .tweets{
         flex-direction: column;
+    }
+    .modal .content-modal{
+        width: 90%;
+        max-width: none;
+        left: 5%;
+        margin-left: 0;
     }
         
 }
